@@ -27,8 +27,8 @@ spec:
               value: localhost
             - name: JMXPORT
               value: "1976"
-            - name: KAFKA_OPTS
-              value: -javaagent:/kafka/etc/jmx_prometheus_javaagent.jar=8080:/kafka/etc/config.yml
+            # - name: KAFKA_OPTS
+            #   value: -javaagent:/kafka/etc/jmx_prometheus_javaagent.jar=8080:/kafka/etc/config.yml
             - name: LD_LIBRARY_PATH
               value: /instant_client
             - name: CONFIG_STORAGE_TOPIC
