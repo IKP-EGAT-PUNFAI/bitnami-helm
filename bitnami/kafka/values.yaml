@@ -758,9 +758,7 @@ controller:
         nodeSelectorTerms:
         - matchExpressions:
           - key: node-role.kubernetes.io/debezium-punfai
-            operator: In
-            values:
-            - "true"
+            operator: Exists
   ## @param controller.nodeSelector Node labels for pod assignment
   ## Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/
   ##
@@ -1231,9 +1229,7 @@ broker:
         nodeSelectorTerms:
         - matchExpressions:
           - key: node-role.kubernetes.io/debezium-punfai
-            operator: In
-            values:
-            - "true"
+            operator: Exists
   ## @param broker.nodeSelector Node labels for pod assignment
   ## Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/
   ##
@@ -2466,9 +2462,7 @@ zookeeper:
         nodeSelectorTerms:
         - matchExpressions:
           - key: node-role.kubernetes.io/debezium-punfai
-            operator: In
-            values:
-            - "true"
+            operator: Exists
   tolerations:
     - key: "node-role.kubernetes.io/debezium-punfai"
       operator: "Equal"
