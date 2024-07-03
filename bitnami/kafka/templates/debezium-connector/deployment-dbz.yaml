@@ -26,6 +26,15 @@ spec:
           operator: "Equal"
           value: ""
           effect: "NoExecute"
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: node-role.kubernetes.io/debezium-punfai
+                operator: In
+                values:
+                - "true"
       containers:
         - env:
             - name: BOOTSTRAP_SERVERS
