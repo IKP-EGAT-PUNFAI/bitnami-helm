@@ -760,7 +760,15 @@ controller:
   ## @param controller.tolerations Tolerations for pod assignment
   ## Ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
   ##
-  tolerations: []
+  tolerations:
+    - key: "node-role.kubernetes.io/debezium-punfai"
+      operator: "Equal"
+      value: ""
+      effect: "NoSchedule"
+    - key: "node-role.kubernetes.io/debezium-punfai"
+      operator: "Equal"
+      value: ""
+      effect: "NoExecute"
   ## @param controller.topologySpreadConstraints Topology Spread Constraints for pod assignment spread across your cluster among failure-domains. Evaluated as a template
   ## Ref: https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/#spread-constraints-for-pods
   ##
@@ -1217,7 +1225,15 @@ broker:
   ## @param broker.tolerations Tolerations for pod assignment
   ## Ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
   ##
-  tolerations: []
+  tolerations:
+    - key: "node-role.kubernetes.io/debezium-punfai"
+      operator: "Equal"
+      value: ""
+      effect: "NoSchedule"
+    - key: "node-role.kubernetes.io/debezium-punfai"
+      operator: "Equal"
+      value: ""
+      effect: "NoExecute"
   ## @param broker.topologySpreadConstraints Topology Spread Constraints for pod assignment spread across your cluster among failure-domains. Evaluated as a template
   ## Ref: https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/#spread-constraints-for-pods
   ##
@@ -2148,7 +2164,15 @@ provisioning:
   ## @param provisioning.tolerations Tolerations for pod assignment
   ## Ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
   ##
-  tolerations: []
+  tolerations:
+    - key: "node-role.kubernetes.io/debezium-punfai"
+      operator: "Equal"
+      value: ""
+      effect: "NoSchedule"
+    - key: "node-role.kubernetes.io/debezium-punfai"
+      operator: "Equal"
+      value: ""
+      effect: "NoExecute"
   ## @param provisioning.extraProvisioningCommands Extra commands to run to provision cluster resources
   ## - echo "Allow user to consume from any topic"
   ## - >-
@@ -2420,6 +2444,15 @@ zookeeper:
   ## @param zookeeper.replicaCount Number of ZooKeeper nodes
   ##
   replicaCount: 3
+  tolerations:
+    - key: "node-role.kubernetes.io/debezium-punfai"
+      operator: "Equal"
+      value: ""
+      effect: "NoSchedule"
+    - key: "node-role.kubernetes.io/debezium-punfai"
+      operator: "Equal"
+      value: ""
+      effect: "NoExecute"
   ## ZooKeeper authentication
   ##
   auth:

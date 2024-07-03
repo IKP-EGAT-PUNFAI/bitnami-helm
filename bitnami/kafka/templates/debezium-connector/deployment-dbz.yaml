@@ -17,6 +17,15 @@ spec:
       labels:
         service: {{ .Values.dbz_connector.connectorName }}
     spec:
+      tolerations:
+        - key: "node-role.kubernetes.io/debezium-punfai"
+          operator: "Equal"
+          value: ""
+          effect: "NoSchedule"
+        - key: "node-role.kubernetes.io/debezium-punfai"
+          operator: "Equal"
+          value: ""
+          effect: "NoExecute"
       containers:
         - env:
             - name: BOOTSTRAP_SERVERS
