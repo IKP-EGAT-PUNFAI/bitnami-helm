@@ -32,7 +32,7 @@ global:
 dbz_connector:
   replicaCount: 0
   connectorName: source
-  namespace: punfai-cdc
+  namespace: punfai-debezium
   image:
     repository: ghcr.io/chonlakornwib/egat-debezium
     pullPolicy: Always
