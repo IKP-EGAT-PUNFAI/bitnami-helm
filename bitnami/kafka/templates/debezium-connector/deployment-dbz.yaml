@@ -32,9 +32,7 @@ spec:
             nodeSelectorTerms:
             - matchExpressions:
               - key: node-role.kubernetes.io/debezium-punfai
-                operator: In
-                values:
-                - "true"
+                operator: Exists
       containers:
         - env:
             - name: BOOTSTRAP_SERVERS
